@@ -1,0 +1,5 @@
+.vscode/
+temp.cpp
+*.out
+*.exe
+cpu_naive
