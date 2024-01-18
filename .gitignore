@@ -3,3 +3,4 @@ temp.cpp
 *.out
 *.exe
 cpu_naive
+cpu_opt_loop

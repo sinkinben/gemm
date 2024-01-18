@@ -25,16 +25,16 @@ public:
         size_t size = GetSize();
         for (size_t i = 0; i < size; ++i)
         {
-            elements[i] = (float)random() / random();
+            elements[i] = (float)random() / __LONG_MAX__ * 10.f;
         }
     }
 
-    void Fill(float val)
+    void Fill(float val = 0)
     {
         std::fill(elements, elements + GetSize(), val);
     }
 
-    inline size_t GetSize() const { return rows * cols; }
+    inline size_t GetSize() const { return (size_t)rows * cols; }
 
     inline float &Get(int i, int j) { return elements[i * cols + j]; }
 };
