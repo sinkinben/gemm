@@ -8,16 +8,14 @@ class Matrix
 public:
     int rows, cols;
     float *elements;
-    Matrix(int m, int n) : rows(m), cols(n)
+    Matrix(int m, int n) : rows(m), cols(n), elements(new float[m * n])
     {
-        elements = (float *)(std::aligned_alloc(kAlignment, m * n * sizeof(float)));
-        assert(elements != nullptr);
     }
 
     virtual ~Matrix()
     {
         if (elements != nullptr)
-            std::free(elements);
+            delete[] elements;
     }
 
     void Randomize()
@@ -25,7 +23,7 @@ public:
         size_t size = GetSize();
         for (size_t i = 0; i < size; ++i)
         {
-            elements[i] = (rand() % 10) * 0.33f;
+            elements[i] = (rand() % 10) * 0.50f;
         }
     }
 

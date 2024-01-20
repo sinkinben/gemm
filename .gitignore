@@ -6,3 +6,4 @@ cpu_naive
 cpu_opt_loop
 cpu_multi_threads
 cpu_simd
+cuda_naive
