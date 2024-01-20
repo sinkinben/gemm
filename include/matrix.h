@@ -25,7 +25,7 @@ public:
         size_t size = GetSize();
         for (size_t i = 0; i < size; ++i)
         {
-            elements[i] = (float)random() / __LONG_MAX__ * 10.f;
+            elements[i] = (rand() % 10) * 0.33f;
         }
     }
 

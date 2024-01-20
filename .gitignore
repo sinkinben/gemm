@@ -4,3 +4,4 @@ temp.cpp
 *.exe
 cpu_naive
 cpu_opt_loop
+cpu_multi_threads
