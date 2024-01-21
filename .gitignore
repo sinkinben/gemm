@@ -1,5 +1,5 @@
 .vscode/
-temp.cpp
+temp.*
 *.out
 *.exe
 cpu_naive
@@ -7,3 +7,4 @@ cpu_opt_loop
 cpu_multi_threads
 cpu_simd
 cuda_naive
+cuda_shared_mem

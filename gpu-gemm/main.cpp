@@ -27,6 +27,7 @@ void RunTest(int m, int n, int k, const char *method)
 
     for (int i = 0; i < TEST_LOOP; ++i)
     {
+        C.FillZero();
         timer.reset();
         CudaMatrixMul(A, B, C);
         total_time += timer.elapsed_nano(); // ns
